@@ -48,6 +48,9 @@ npm run build
 
 **Role**: Operations / staff UI (View Design, iView-admin–style shell).
 
+<img width="1470" height="802" alt="admin" src="https://github.com/user-attachments/assets/64b0f9b9-e5ac-4b87-827f-fb3ef352e304" />
+
+
 **Stack**
 
 - Vue 2, Vue Router, Vuex
