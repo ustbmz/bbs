@@ -1,10 +1,135 @@
-# BBS 博客系统
+# BBS Blog System · 博客系统
+
+## English
+
+This repository is a decoupled blog / community-style site: the public web app, admin console, and HTTP API live in three separate packages that can be developed and deployed on their own.
+
+---
+
+### `front` — Public web app
+
+**Role**: End-user SPA for reading posts, account flows, and publishing.
+
+**Stack**
+
+- Vue 2, Vue Router, Vuex
+- Vue CLI 4, Sass
+- Axios
+- LayUI (layout / styling)
+- vue-i18n
+- vee-validate, yup
+- JWT (`jsonwebtoken`), SVG captcha (`svg-captcha`)
+- dayjs
+
+**Features**
+
+- Home and channel listing, category templates (`channels`)
+- Sign up, sign in, forgot password, email confirmation, password reset
+- User public profile (`/home/:uid`)
+- User center (auth required): profile & password, avatar, account binding; my posts & collections; messages and other entry points
+- Create, edit, and view posts (route guards for protected actions)
+- Basic pages such as 404
+
+**Commands** (from `front/`)
+
+```bash
+npm install
+npm run dev
+npm run build
+```
+
+---
+
+### `admin` — Admin console
+
+**Role**: Operations / staff UI (View Design, iView-admin–style shell).
+
+**Stack**
+
+- Vue 2, Vue Router, Vuex
+- View Design (iView 4)
+- Vue CLI 4, Less / Sass
+- ECharts; wangEditor, CodeMirror, SimpleMDE, and related editor tooling
+- axios, vue-i18n, js-cookie
+- Unit tests (Mocha), E2E (Cypress-related setup), husky + lint-staged
+
+**Features**
+
+- Dashboard home and stats
+- **Content**: articles, tags, friend links
+- **Moderation**: comment review and management
+- **Users**: back-office user list and maintenance
+- **Menus & RBAC**: dynamic menus and role-based access
+- **System**: error log inspection
+- **Blog**: Markdown-oriented article list, create, and edit
+- Login and 401 / 404 / 500 pages
+
+**Commands** (from `admin/`)
+
+```bash
+npm install
+npm run dev
+npm run build
+npm run test:unit
+```
+
+---
+
+### `api` — Backend service
+
+**Role**: HTTP API for `front` and `admin`: auth, domain data, and some realtime behavior.
+
+**Stack**
+
+- Node.js, Koa 2
+- koa-router, koa-body, koa-jwt, JWT
+- Mongoose (MongoDB)
+- Redis
+- bcrypt, nodemailer
+- WebSocket (`ws`)
+- Babel 7, Webpack 4 bundle for deployment; nodemon in development
+
+**Features** (by route modules)
+
+- **Auth & public**: registration, login, captcha, static assets, etc.
+- **Users**: profile and related behavior APIs
+- **Blog / content**: posts, categories, tags, etc.
+- **Comments**: create and read flows
+- **Admin**: dedicated back-office APIs (e.g. `AdminController`)
+- Middleware: CORS (`@koa/cors`), security headers (koa-helmet), compression, etc.
+
+**Commands** (from `api/`)
+
+```bash
+npm install
+npm run start
+npm run build
+npm run dev
+```
+
+Optional data seeds: `npm run seed`, `npm run seed:admin` (requires DB and environment configuration).
+
+---
+
+### Repository layout
+
+| Path | Description |
+|------|-------------|
+| `front/` | Public user SPA |
+| `admin/` | Admin SPA |
+| `api/` | Koa + MongoDB + Redis server |
+
+Each package has its own `package.json` and optional Docker assets; configure environment variables and database connections before deployment.
+
+---
+
+## 中文
 
 本仓库为前后端分离的博客 / 论坛类站点：公开站点、管理后台与 REST API 分属三个子项目，可独立开发与部署。
 
 ---
 
-## `front` — 用户前台
+### `front` — 用户前台
 
 **定位**：访客与登录用户使用的 Web 前端（文章浏览、个人中心、发帖等）。
 
@@ -38,7 +163,7 @@ npm run build
 
 ---
 
-## `admin` — 管理后台
+### `admin` — 管理后台
 
 **定位**：运营与管理员使用的控制台（基于 iView Admin 风格的 View Design 后台）。
 
@@ -73,7 +198,7 @@ npm run test:unit
 
 ---
 
-## `api` — 服务端接口
+### `api` — 服务端接口
 
 **定位**：为 `front` 与 `admin` 提供 HTTP API，负责认证、业务数据与部分实时能力。
 
@@ -109,7 +234,7 @@ npm run dev
 
 ---
 
-## 目录结构（概要）
+### 目录结构（概要）
 
 | 目录 | 说明 |
 |------|------|
