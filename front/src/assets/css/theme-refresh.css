@@ -1,0 +1,250 @@
+/* UI refresh — 在保留 Fly/Layui 结构下收紧视觉：字体、留白、圆角、浅色层次 */
+
+html {
+  background: #eef1f6;
+  background: linear-gradient(165deg, #e4e9f2 0%, #eef1f6 38%, #f4f6fa 100%);
+  background-attachment: fixed;
+}
+
+html body {
+  color: #334155;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  min-height: calc(100vh - 61px);
+}
+
+/* 卡片 */
+.fly-panel {
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 8px 24px rgba(15, 23, 42, 0.06);
+  margin-bottom: 18px;
+}
+
+.fly-panel-title {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.07);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #1e293b;
+  background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+}
+
+.fly-panel-main {
+  padding: 12px 16px;
+}
+
+/* 顶部分类条同为一块「顶栏卡片」 */
+.fly-column.fly-panel {
+  border-radius: 12px;
+}
+
+.fly-column ul li.layui-this:after {
+  border-radius: 6px;
+}
+
+/* 列表行 */
+.fly-list li {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  transition: background-color 0.15s ease;
+}
+
+.fly-list li:hover {
+  background-color: rgba(95, 184, 120, 0.045);
+}
+
+.fly-list li h2 a {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.fly-list li h2 a:hover {
+  color: #5fb878;
+}
+
+/* 头像格子略圆一点 */
+.fly-avatar img {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+/* 链接色：略偏现代蓝，悬停仍用社区绿 */
+.fly-link {
+  color: #2563eb;
+}
+
+.fly-link:hover {
+  color: #5fb878;
+}
+
+.fly-list-static li a {
+  color: #2563eb;
+}
+
+.fly-list-static li a:hover {
+  color: #5fb878;
+  opacity: 1;
+}
+
+a:hover {
+  color: #5fb878;
+}
+
+/* 筛选当前态 */
+.fly-filter a.layui-this {
+  color: #3d9970;
+  font-weight: 600;
+}
+
+/* 分页 */
+.laypage-main {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+}
+
+/* 顶栏 — 深蓝灰渐变 + 细顶高光，替代纯黑 banner */
+.fly-header.fly-header-bar {
+  background: linear-gradient(
+    118deg,
+    #1e293b 0%,
+    #0f172a 45%,
+    #0c1524 72%,
+    #0a1628 100%
+  ) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-right: none;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 10px 40px rgba(2, 6, 23, 0.45);
+  backdrop-filter: saturate(1.1) blur(14px);
+  -webkit-backdrop-filter: saturate(1.1) blur(14px);
+}
+
+.fly-header.fly-header-bar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(94, 234, 212, 0.35) 22%,
+    rgba(129, 140, 248, 0.3) 50%,
+    rgba(94, 234, 212, 0.2) 78%,
+    transparent 100%
+  );
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* 主导航文字与悬停 */
+.fly-header.fly-header-bar .layui-nav > .layui-nav-item > a {
+  color: rgba(248, 250, 252, 0.78) !important;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  border-radius: 8px;
+}
+
+.fly-header.fly-header-bar .layui-nav > .layui-nav-item > a:hover {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.fly-header.fly-header-bar .layui-nav > .layui-nav-item.layui-this > a {
+  color: #ecfdf5 !important;
+  font-weight: 600;
+  background: rgba(95, 184, 120, 0.14);
+  box-shadow: 0 0 0 1px rgba(95, 184, 120, 0.22);
+}
+
+.fly-header.fly-header-bar .fly-nav-user > .layui-nav-item > a,
+.fly-header.fly-header-bar .fly-nav-user .router-link-active {
+  color: rgba(248, 250, 252, 0.82) !important;
+}
+
+.fly-header.fly-header-bar .fly-nav-user > .layui-nav-item > a:hover {
+  color: #fff !important;
+}
+
+.fly-header.fly-header-bar .fly-nav-user a.iconfont {
+  color: rgba(148, 163, 184, 0.95) !important;
+}
+
+.fly-header.fly-header-bar .fly-nav-user a.iconfont:hover {
+  color: #5eead4 !important;
+}
+
+.fly-header.fly-header-bar .fly-nav-avatar cite {
+  color: rgba(248, 250, 252, 0.92);
+  font-weight: 500;
+}
+
+/* 用户下拉：与顶栏色相协调 */
+.fly-header.fly-header-bar .fly-nav-user .layui-nav-child {
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 12px 40px rgba(2, 6, 23, 0.35);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.fly-header.fly-header-bar .fly-nav-user .layui-nav-child dd a:hover {
+  background-color: rgba(95, 184, 120, 0.1);
+}
+
+/* 主按钮：圆角与轻微层次 */
+.fly-column-right .layui-btn {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(95, 184, 120, 0.28);
+}
+
+.layui-hide-sm.layui-show-xs-block .layui-btn {
+  border-radius: 8px;
+}
+
+/* 详情作者区 */
+.detail-about {
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.jieda li {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+/* 页脚 */
+.fly-footer {
+  margin-top: 40px;
+  padding-top: 28px;
+  padding-bottom: 36px;
+  background: #f8fafc;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  color: #64748b;
+}
+
+.fly-footer a {
+  color: #475569;
+  font-weight: 400;
+}
+
+.fly-footer a:hover {
+  color: #5fb878;
+}
+
+/* 徽章略圆 */
+.fly-badge-vip,
+.fly-badge-accept,
+.fly-list-badge .layui-badge {
+  border-radius: 4px;
+}

@@ -1,0 +1,1 @@
+db.getCollection('posts').updateMany({uid,'60cc33208244a8d179cf09cc'})

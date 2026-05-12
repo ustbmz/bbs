@@ -1,0 +1,16 @@
+version: "2"
+services:
+  DOClever:
+    image: lw96/doclever
+    restart: always
+    container_name: "DOClever"
+    ports:
+    - 20080:10000
+    volumes:
+    - /Users/mew/Docker/doclever/file:/root/DOClever/data/file
+    - /Users/mew/Docker/doclever/img:/root/DOClever/data/img
+    - /Users/mew/Docker/doclever/tmp:/root/DOClever/data/tmp
+    ## 配置为已存在的mongo
+    environment:
+    - DB_HOST=mongodb://0.0.0.0:27017/DOClever
+    - PORT=10000

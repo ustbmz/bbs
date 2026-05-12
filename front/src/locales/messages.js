@@ -1,0 +1,282 @@
+export default {
+  zh: {
+    nav: {
+      home: '首页',
+      blog: '博客',
+      login: '登入',
+      register: '注册',
+      qqLogin: 'QQ登入',
+      wbLogin: '微博登入',
+      settings: '基本设置',
+      messages: '我的消息',
+      profile: '我的主页',
+      logout: '退出',
+      unreadTip: '您有{count}条未读消息'
+    },
+    lang: {
+      zh: '中文',
+      en: 'English',
+      enShort: 'EN',
+      switchAria: '界面语言'
+    },
+    footer: {
+      copyright: '©2021 ustbmz. All rights reserved'
+    },
+    panel: {
+      home: '首页',
+      ask: '提问',
+      share: '分享',
+      discuss: '讨论',
+      advise: '建议',
+      notice: '公告',
+      logs: '动态',
+      myPosts: '我发表的贴',
+      myFavs: '我收藏的贴',
+      newPost: '发表新帖'
+    },
+    list: {
+      all: '综合',
+      open: '未结',
+      closed: '已结',
+      featured: '精华',
+      byNew: '按最新',
+      byHot: '按热议',
+      closedBadge: '已结',
+      loadMore: '更多求解',
+      noMore: '没有更多了',
+      pinned: '置顶',
+      goSign: '去签到',
+      kissTitle: '悬赏飞吻'
+    },
+    catalog: {
+      ask: '提问',
+      share: '分享',
+      discuss: '讨论',
+      advise: '建议',
+      notice: '公告',
+      logs: '动态',
+      unknown: '未知'
+    },
+    user: {
+      quitConfirm: '是否退出当前用户?'
+    },
+    tags: {
+      Featured: '精华',
+      Hot: '热门'
+    },
+    detail: {
+      delete: '删除',
+      pin: '置顶',
+      unpin: '取消置顶',
+      answerIcon: '回复数',
+      viewsIcon: '浏览',
+      reward: '悬赏：{points} 积分',
+      edit: '编辑',
+      bookmark: '收藏',
+      removeBookmark: '取消收藏',
+      repliesTitle: '回帖',
+      op: '（楼主）',
+      reply: '回复',
+      editShort: '编辑',
+      accept: '采纳',
+      noRepliesYet: '消灭零回复',
+      captcha: '验证码',
+      captchaPh: '请输入验证码',
+      submitReply: '提交回复',
+      bestAnswer: '最佳答案',
+      likeOk: '点赞成功',
+      acceptConfirm: '确认采纳为最佳回答吗？',
+      acceptOk: '采纳成功',
+      loginFirst: '请先登陆',
+      commentUpdated: '评论更新成功',
+      commentOk: '评论成功',
+      unfavOk: '已取消收藏',
+      favOk: '收藏成功'
+    },
+    sidebar: {
+      hotWeek: '本周热议',
+      memorialTitle: '逝去的时光',
+      memorialBtn: '谨此纪念 Layui',
+      linksTitle: '友情链接',
+      applyLink: '申请友链',
+      tipsTitle: '温馨通道'
+    },
+    postForm: {
+      newPostTab: '发表新帖',
+      editPostTab: '编辑帖子',
+      column: '所在专栏',
+      titleLabel: '标题',
+      placeholderSelect: '请选择',
+      rewardLabel: '悬赏飞吻',
+      rewardHint: '发表后无法更改飞吻',
+      publish: '立即发布',
+      saveChanges: '保存修改',
+      loadDraft: '是否加载上次未完成的数据'
+    },
+    sign: {
+      title: '签到',
+      help: '说明',
+      leaderboard: '活跃榜',
+      streakLine: '已连续签到 {count} 天',
+      signToday: '今日签到',
+      rewardLine: '可获得 {points} 飞吻',
+      earnedLine: '获得了 {points} 飞吻',
+      signedToday: '今日已签到',
+      loginFirst: '请先登陆',
+      signOk: '签到成功',
+      alreadySigned: '用户已签到',
+      infoTitle: '签到说明',
+      infoQuote: '「签到」可获得社区积分，规则如下',
+      colStreak: '连续签到天数',
+      colDaily: '每天可获积分',
+      infoNote1: '中间若有间隔，则连续天数重新计算',
+      infoNote2: '不可复用程序自动签到，否则积分自动清零',
+      listTitle: '签到活跃榜 — TOP 10',
+      tabLatest: '最新签到',
+      tabFastest: '今日最快',
+      tabTotal: '总签到榜',
+      signedAt: '签到于',
+      streakTotal: '已经连续签到'
+    }
+  },
+  en: {
+    nav: {
+      home: 'Home',
+      blog: 'Blog',
+      login: 'Sign in',
+      register: 'Sign up',
+      qqLogin: 'QQ sign-in',
+      wbLogin: 'Weibo sign-in',
+      settings: 'Settings',
+      messages: 'Messages',
+      profile: 'My profile',
+      logout: 'Log out',
+      unreadTip: 'You have {count} unread messages'
+    },
+    lang: {
+      zh: '中文',
+      en: 'English',
+      enShort: 'EN',
+      switchAria: 'Interface language'
+    },
+    footer: {
+      copyright: '©2021 ustbmz. All rights reserved'
+    },
+    panel: {
+      home: 'Home',
+      ask: 'Q&A',
+      share: 'Share',
+      discuss: 'Discuss',
+      advise: 'Suggest',
+      notice: 'Notice',
+      logs: 'Activity',
+      myPosts: 'My posts',
+      myFavs: 'My favorites',
+      newPost: 'New post'
+    },
+    list: {
+      all: 'All',
+      open: 'Open',
+      closed: 'Closed',
+      featured: 'Featured',
+      byNew: 'Newest',
+      byHot: 'Trending',
+      closedBadge: 'Closed',
+      loadMore: 'Load more',
+      noMore: 'No more',
+      pinned: 'Pinned',
+      goSign: 'Check in',
+      kissTitle: 'Reward kisses'
+    },
+    catalog: {
+      ask: 'Q&A',
+      share: 'Share',
+      discuss: 'Discuss',
+      advise: 'Suggest',
+      notice: 'Notice',
+      logs: 'Activity',
+      unknown: 'Other'
+    },
+    user: {
+      quitConfirm: 'Sign out of the current account?'
+    },
+    tags: {
+      Featured: 'Featured',
+      Hot: 'Hot'
+    },
+    detail: {
+      delete: 'Delete',
+      pin: 'Pin',
+      unpin: 'Unpin',
+      answerIcon: 'Replies',
+      viewsIcon: 'Views',
+      reward: 'Reward: {points} pts',
+      edit: 'Edit',
+      bookmark: 'Bookmark',
+      removeBookmark: 'Remove',
+      repliesTitle: 'Replies',
+      op: '(OP)',
+      reply: 'Reply',
+      editShort: 'Edit',
+      accept: 'Accept',
+      noRepliesYet: 'No replies yet — be the first.',
+      captcha: 'Captcha',
+      captchaPh: 'Enter captcha',
+      submitReply: 'Submit reply',
+      bestAnswer: 'Best answer',
+      likeOk: 'Liked',
+      acceptConfirm: 'Mark this reply as the best answer?',
+      acceptOk: 'Accepted',
+      loginFirst: 'Please sign in first',
+      commentUpdated: 'Comment updated',
+      commentOk: 'Comment posted',
+      unfavOk: 'Removed from bookmarks',
+      favOk: 'Saved to bookmarks'
+    },
+    sidebar: {
+      hotWeek: 'Trending this week',
+      memorialTitle: 'In memory',
+      memorialBtn: 'In memory of Layui',
+      linksTitle: 'Links',
+      applyLink: 'Apply for link',
+      tipsTitle: 'Tips'
+    },
+    postForm: {
+      newPostTab: 'New post',
+      editPostTab: 'Edit post',
+      column: 'Category',
+      titleLabel: 'Title',
+      placeholderSelect: 'Please select',
+      rewardLabel: 'Reward (kiss points)',
+      rewardHint: 'Reward cannot be changed after publishing.',
+      publish: 'Publish',
+      saveChanges: 'Save changes',
+      loadDraft: 'Load your last unsaved draft?'
+    },
+    sign: {
+      title: 'Check-in',
+      help: 'Rules',
+      leaderboard: 'Leaderboard',
+      streakLine: 'Streak: {count} days',
+      signToday: 'Check in today',
+      rewardLine: 'Earn up to {points} kiss points',
+      earnedLine: 'You earned {points} kiss points',
+      signedToday: 'Checked in today',
+      loginFirst: 'Please sign in first',
+      signOk: 'Check-in successful',
+      alreadySigned: 'Already checked in today',
+      infoTitle: 'Check-in rules',
+      infoQuote: 'Daily check-in earns community points. Rules:',
+      colStreak: 'Consecutive days',
+      colDaily: 'Points per day',
+      infoNote1: 'If you miss a day, your streak resets.',
+      infoNote2: 'Automated check-ins are not allowed; abuse will zero your points.',
+      listTitle: 'Check-in leaderboard — TOP 10',
+      tabLatest: 'Latest',
+      tabFastest: 'Fastest today',
+      tabTotal: 'All-time streak',
+      signedAt: 'Signed at',
+      streakTotal: 'Streak'
+    }
+  }
+}
